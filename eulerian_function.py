@@ -98,10 +98,12 @@ model_resolution = {
     'TaiESM1': (122, 1.095)           # 0.9x1.25 degree; 288 x 192 longitude/latitude; https://www.cen.uni-hamburg.de/en/icdc/data/cryosphere/cmip6-sea-ice-area/taiesm1.html
 }
 
-grp_mod_res = {'rcm'    : ['CRCM6-GEM5-UAA-SN', 'CRCM6-GEM5-UAA', 'CRCM6-GEM5-UBD', 'CRCM6-GEM5-UBE', 'CRCM6-GEM5-UBF'],
-               'high'   : ['CNRM-CM6-1-HR', 'EC-Earth3-AerChem', 'EC-Earth3-Veg', 'EC-Earth3', 'MPI-ESM1-2-HR', 'GFDL-CM4', 'GFDL-ESM4', 'CMCC-CM2-SR5', 'CMCC-ESM2'],
-               'medium' : ['NorESM2-MM', 'SAM0-UNICON', 'TaiESM1', 'BCC-CSM2-MR', 'MRI-ESM2-0', 'EC-Earth3-Veg-LR', 'CNRM-CM6-1', 'CNRM-ESM2-1', 'MIROC6'],
-               'low'    : ['ACCESS-CM2', 'ACCESS-ESM1-5', 'KIOST-ESM', 'MPI-ESM-1-2-HAM', 'MPI-ESM1-2-LR', 'AWI-ESM-1-1-LR', 'GISS-E2-1-G', 'CanESM5', 'MIROC-ES2L']}
+grp_mod_res = {'rcm' : ['CRCM6-GEM5-UAA-SN', 'CRCM6-GEM5-UAA', 'CRCM6-GEM5-UBD', 'CRCM6-GEM5-UBE', 'CRCM6-GEM5-UBF'],
+            'driver' : ['EC-Earth3-Veg', 'MPI-ESM1-2-HR', 'MIROC6'],
+            'high'   : ['CNRM-CM6-1-HR', 'EC-Earth3-AerChem', 'EC-Earth3-Veg', 'EC-Earth3', 'MPI-ESM1-2-HR', 'GFDL-CM4', 'GFDL-ESM4', 'CMCC-CM2-SR5', 'CMCC-ESM2'],
+            'medium' : ['NorESM2-MM', 'SAM0-UNICON', 'TaiESM1', 'BCC-CSM2-MR', 'MRI-ESM2-0', 'EC-Earth3-Veg-LR', 'CNRM-CM6-1', 'CNRM-ESM2-1', 'MIROC6'],
+            'low'    : ['ACCESS-CM2', 'ACCESS-ESM1-5', 'KIOST-ESM', 'MPI-ESM-1-2-HAM', 'MPI-ESM1-2-LR', 'AWI-ESM-1-1-LR', 'GISS-E2-1-G', 'CanESM5', 'MIROC-ES2L']}
+
 
 filename = '/storm/demeyer/TRACKING/EULERIAN/OUTPUTS/psl/ACCESS-CM2_NA_1980.nc4'
 ds_i = xr.open_mfdataset(filename)
